@@ -1,7 +1,7 @@
 import os
 import pickle
 import pandas as pd
-
+esc
 from flask import Flask, render_template, request
 
 
@@ -35,12 +35,11 @@ def desc():
 
     # prediction
     prob = loaded_model.predict_proba(user_input)[0]
-    predict_result = dict(enumerate(prob))
+    df_prob = pd.DataFrame(data=[job_names, prob], columns=["job_name", "prob"])
+    sorted_df = df_prob.sort_values(by=['prob'], ascending=False)
     
-    responses = {
-            "job_names": job_names,
-            "predict_result": predict_result,
-            }
+    responses = sorted_df.to_json(orient="records")
+
     return result(responses)
 
 @app.route('/result')
