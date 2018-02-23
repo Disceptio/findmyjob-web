@@ -1,3 +1,123 @@
 body {
-    background: rgb(100,100,100);
+    background: rgb(31,31,31);
+}
+
+/*
+ * index.html contents custom
+ */
+
+.fw-main-title-text {
+    color: rgb(245,245,245);
+    font-family: 'Open Sans Condensed', Helvetica;
+    letter-spacing: -0.05em;
+    font-size: 9.0em;
+    line-height: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+  .fw-main-title-text {
+    font-size: 3.0em;
+    line-height: 0.8em;
+
+  }
+
+}
+.fw-container {
+  display: flex;
+  align-items: center;
+}
+.fw-description-text {
+    font-family: 'Open Sans Condensed', Helvetica;
+}
+
+.fw-form-container {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+@media screen and (max-width: 767px) {
+  .fw-form-container {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+}
+
+.fw-container-full {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.fw-header-content {
+  margin: auto !important;
+  top: 40%;
+}
+
+/*
+ * mouse scroll action icon
+ */
+.fw-mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 200px;
+  left: 50%;
+  padding-left: 0px !important;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #888;
+  -webkit-animation: intro 1s;
+          animation: intro 1s;
+}
+.fw-scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #888;
+  -webkit-animation: finger 1s infinite;
+          animation: finger 1s infinite;
+}
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+@keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }

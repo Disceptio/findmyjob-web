@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-<h1>Result</h1>
-<p>Result is ..{{ responses }}</p>
+
+<div class="uk-grid fw-container-full">
+ <div class="uk-width-1-1">
+  <h1>Result</h1>
+
+  <script>
+  var result_data = {{ responses | safe }}
+  </script>
+ </div>
+</div>
 {% endblock %}
