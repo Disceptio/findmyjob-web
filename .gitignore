@@ -4,7 +4,7 @@
 .gitignore
 
 # Model
-models/model-v1.pk
+*.pk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
