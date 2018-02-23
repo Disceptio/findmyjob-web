@@ -1,11 +1,32 @@
 {% extends "layout.html" %}
 {% block body %}
-<h1>Home</h1>
-<p>This is home.</p>
+<div class="uk-grid fw-container-full">
+ <div class="uk-width-medium-1-2 uk-container-center uk-text-center fw-header-content">
+  <a href="#desc-container" data-uk-smooth-scroll="{offset: 50}"><h1 class="fw-main-title-text">FIND MY JOB</h1></a>
+  <p class="fw-main-description">Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper.</p>
+ </div>
+ <a href="#desc-container" data-uk-smooth-scroll="{offset: 50}">
+  <div class="fw-mouse" style="padding-left:0px;">
+   <div class="fw-scroll"></div>
+  </div>
+ </a>
+</div>
 
-<form action="/desc" method="POST">
- <input type="textarea" name="description">
- <input type="submit" value="Submit">
-</form>
-
+<div class="uk-grid" id="desc-container">
+ <div class="uk-width-medium-2-3 uk-container-center fw-container-full">
+  <form class="uk-form" id="description-form" action="/desc" method="POST">
+   <fieldset>
+   	<legend>Every Keywords what best describes you</legend>
+   	<div class="uk-form-row">
+     <textarea type="textarea" class="uk-form-blank uk-placeholder-large uk-width-1-1" name="description" placeholder="Type your keywords here." rows="10"></textarea>
+     <p class="uk-form-help-block">expriences, educations, skills, ..</p>
+    </div>
+    <div class="uk-form-row">
+     <button class="uk-button uk-button-large" type="submit" value="Submit">Submit and Find your job</button>
+    </div>
+   </fieldset>
+  </form>
+ </div>
+</div>
+ 
 {% endblock %}

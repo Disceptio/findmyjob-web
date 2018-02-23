@@ -2,8 +2,10 @@
 <html>
  {% include "partials/head.html" %}
  <body>
-  {% include "partials/header.html" %}
-  {% block body %}{% endblock %}
+  <div class="uk-container uk-container-center">
+   {% include "partials/header.html" %}
+   {% block body %}{% endblock %}
+  </div>
   {% include "partials/footer.html" %}
  </body>
 </html>

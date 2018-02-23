@@ -1,5 +1,10 @@
 # Custom
 .env
+.DS_Store
+.gitignore
+
+# Model
+models/model-v1.pk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
